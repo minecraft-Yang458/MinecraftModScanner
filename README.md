@@ -36,7 +36,7 @@
 - QSettings 持久化设置；非法值回退默认值。
 - API Key 与 User-Agent 不写入日志。
 
----
+
 
 ## 环境要求
 
@@ -49,7 +49,7 @@
 
 无第三方导出库依赖（不需要 QXlsx、libxlsxwriter 等）。
 
----
+
 
 ## 构建
 
@@ -178,7 +178,7 @@ cmake --install build --prefix dist
 
 Qt 的部署脚本会调用 `windeployqt`，把所需 DLL 和 `platforms/qwindows.dll` 等插件放入输出目录。
 
----
+
 
 ## 运行与使用
 
@@ -242,7 +242,6 @@ Windows 下按以下顺序尝试打开链接：
 - 双击条目跳转并选中主表格对应行。
 - 顶部有统计摘要和刷新按钮；模型变化时会自动刷新。
 
----
 
 ## 设置说明
 
@@ -285,7 +284,7 @@ Windows 下按以下顺序尝试打开链接：
 
 所有数值都会校验；非法值回退到 `AppConfig` 中的唯一默认值定义。
 
----
+
 
 ## CurseForge API Key 获取
 
@@ -298,7 +297,7 @@ Windows 下按以下顺序尝试打开链接：
 
 > 如果 CurseForge 返回 401/403，通常是 Key 无效、过期、权限不足或被服务端限制。请到控制台重新创建，或在设置中临时勾选“使用浏览器 UA”后重试连通性检查。
 
----
+
 
 ## 清洗规则细节
 
@@ -352,7 +351,7 @@ Windows 下按以下顺序尝试打开链接：
 | `MTS Official Pack-1.20.1-V29.jar` | `MTS Official Pack` | `MTS Official Pack` |
 | `NaturalDecorMod_NOBIOMES_1.20.1_V1.9.5.jar` | `NaturalDecorMod` | `NaturalDecorMod` |
 
----
+
 
 ## 网络与重试策略
 
@@ -371,7 +370,7 @@ Windows 下按以下顺序尝试打开链接：
 - 状态文本显示“当前文件 · 当前平台 · 检索中 / 重试 n/m / 404 未找到 / 成功 / 失败”。
 - 总进度 = 参与检索的扫描行数 × 启用平台数；MC百科单独提示，不占主进度。
 
----
+
 
 ## 导出
 
@@ -395,7 +394,7 @@ Windows 下按以下顺序尝试打开链接：
 
 本项目**没有使用 QXlsx**，因此 Excel 功能无需可选依赖，也不会静默缺失。
 
----
+
 
 ## MC百科进阶检索
 
@@ -414,7 +413,7 @@ Windows 下按以下顺序尝试打开链接：
 
 参考项目：[zkitefly/mcmod-api](https://github.com/zkitefly/mcmod-api)（非官方，MIT License，数据版权归 MC百科）。
 
----
+
 
 ## 持久化与安全
 
@@ -429,7 +428,7 @@ Windows 下按以下顺序尝试打开链接：
 - API Key 默认不持久化。勾选记住后以**明文**存入 QSettings；程序在保存前会提示风险。
 - 建议不要把配置文件或日志上传到公共位置。
 
----
+
 
 ## 测试
 
@@ -467,7 +466,7 @@ $env:MMS_UI_SCREENSHOT_DIR = "$PWD\ui-shots"
 
 该测试默认关闭，不会影响正式构建。
 
----
+
 
 ## 数字显示
 
@@ -485,7 +484,7 @@ $env:MMS_UI_SCREENSHOT_DIR = "$PWD\ui-shots"
 
 用户原始文件名和 API 返回的原始字段保持原样，不会被改写。
 
----
+
 
 ## 已知限制
 
@@ -503,7 +502,7 @@ $env:MMS_UI_SCREENSHOT_DIR = "$PWD\ui-shots"
 12. 若系统安全软件或权限策略禁止写入所有可选目录，导出会失败；可使用“快速导出到默认目录”或检查目录权限/受控文件夹访问设置。
 13. 管理员权限不是必需条件。以管理员身份运行可能绕过部分目录限制，但会增加权限风险，并可能影响默认浏览器启动；优先使用应用数据导出目录。
 
----
+
 
 ## 工程结构
 
@@ -542,7 +541,7 @@ tests/
   test_network.cpp             可选实时网络冒烟测试
 ```
 
----
+
 
 ## 数据来源与许可
 
