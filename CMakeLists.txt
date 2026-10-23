@@ -117,7 +117,7 @@ install(TARGETS MinecraftModScanner
     BUNDLE DESTINATION .
     RUNTIME DESTINATION .
 )
-install(FILES README.md LICENSE DESTINATION .)
+install(FILES README.md LICENSE NOTICE DESTINATION .)
 
 if(WIN32)
     qt_generate_deploy_app_script(

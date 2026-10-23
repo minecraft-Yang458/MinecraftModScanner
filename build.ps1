@@ -360,7 +360,7 @@ if ($Deploy) {
     New-Item -ItemType Directory -Path $distDir -Force | Out-Null
     $distExe = Join-Path $distDir "MinecraftModScanner.exe"
     Copy-Item -LiteralPath $exe.FullName -Destination $distExe -Force
-    foreach ($doc in @("README.md", "LICENSE")) {
+    foreach ($doc in @("README.md", "LICENSE", "NOTICE")) {
         $docPath = Join-Path $script:ProjectRoot $doc
         if (Test-Path -LiteralPath $docPath) {
             Copy-Item -LiteralPath $docPath -Destination (Join-Path $distDir $doc) -Force
